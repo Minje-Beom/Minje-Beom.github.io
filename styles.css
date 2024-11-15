@@ -1,0 +1,246 @@
+/* Apply a general box-sizing rule to all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body settings */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #FFFFF5;
+}
+
+/* Wrapper to center content and add left/right margins */
+.content-wrapper {
+    max-width: 1000px; /* Max width of the content */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 50px; /* Optional: Adjust the padding if needed */
+}
+
+/* Navigation Bar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 40px;
+}
+
+section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* About Section Styles */
+#about {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: transparent;
+}
+
+#about h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Flexbox Layout for About Section */
+.about-content {
+    /* display: flex; */
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    text-align: justify;
+    gap: 20px;
+    margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.about-text {
+    flex: 2; /* Takes 2/3 of the width */
+}
+
+.about-image {
+    flex: 1; /* Takes 1/3 of the width */
+}
+
+
+.about-image img {
+    width: 100%; /* Makes the image fill its container */
+    height: auto; /* Maintain the image's aspect ratio */
+    border-radius: 8px; /* Optional: to give the image rounded corners */
+}
+
+.about-image2 img {
+    display: flex; 
+    justify-content: center;
+    margin-left: auto; 
+    margin-right: auto;
+    width: 90%; 
+    height: auto; /* Maintain the image's aspect ratio */
+    border-radius: 8px; /* Optional: to give the image rounded corners */
+}
+
+#Career h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+/* Flexbox Layout for About Section */
+.career-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+
+/* Research Section Styles */
+#research {
+    padding: 40px 0;
+    background-color: transparent;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.research-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.research-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.research-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.research-item h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.research-item p {
+    color: #555;
+    font-size: 1rem;
+}
+
+.research-item em {
+    color: #777;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+        /* Center the button container */
+        .button-container-wrapper {
+            display: flex;                    /* Set as flex container */
+            justify-content: center;          /* Horizontally center the button container */
+            width: 100%;                      /* Ensure the wrapper takes full width */
+        }
+
+            /* Styling for the container */
+        .button-container  {
+            position: fixed;   /* Position the container relative to the viewport */
+            top: 50px;         /* Distance from the top of the page */
+            right: 50px;       /* Distance from the right edge of the page */
+            z-index: 1000;     /* Ensure the button stays on top of other elements */
+            width: 120px;
+            display: flex;
+            flex-direction: row;            /* Align items in a row */
+            justify-content: center;  /* Distribute buttons evenly */
+            align-items: center;            /* Vertically align buttons */
+            height: 30px;                  /* Full height of the viewport */
+            background-color: none;     /* Light background color */
+        }
+
+        /* Styling for each icon (replacing buttons) */
+        .button-container img {
+            width:  30px;                    /* Set icon size */
+            height: 30px;                   /* Set icon size */
+            align-items: center;            /* Vertically align buttons */
+            text-align: center;
+            object-fit: contain;            
+            cursor: pointer;               /* Pointer cursor on hover */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        /* Image hover effect (scale icon on hover) */
+        .button-container img:hover {
+            transform: scale(1.1);          /* Scale the image slightly on hover */
+        }
+        /* Custom Tooltip Styling */
+        .tooltip {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above the button */
+            left: 50%;
+            margin-left: -60px; /* Center the tooltip horizontally */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Show the tooltip when the button is hovered */
+        .button-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+/* Basic Divider Styling */
+.divider {
+    width: 100%;
+    height: 2px; /* Thickness of the bar */
+    background-color: #A9A9A9; /* Color of the divider */
+    margin: 50px 0; /* Vertical space before and after the bar */
+}
+
